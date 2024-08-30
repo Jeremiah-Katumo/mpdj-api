@@ -20,10 +20,12 @@ $TransactionDesc = 'stkpush test';
 $Amount = $money;
 $stkpushheader = ['Content-Type: application/json', 'Authorization:Bearer ' . $access_token];
 
+// INITIATE CURL
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $processrequestUrl);
 curl_setopt($curl, CURLOPT_HTTPHEADER, $stkpushheader);
 $curl_post_data = array(
+    // Fill in the request params with valid values
     'BusinessShortCode' => $BusinessShortCode,
     'Password' => $Password,
     'Timestamp' => $Timestamp,
