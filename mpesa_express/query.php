@@ -38,13 +38,13 @@ $data_to = json_encode($curl_response);
 if (isset($data_to->ResultCode)) {
     $ResultCode = $data_to->ResultCode;
     if ($ResultCode == '1037') {
-        $message = 'Timeout in completing transaction.';
+        $message = '1037 Timeout in completing transaction.';
     } elseif ($ResultCode == '1032') {
-        $message = 'Transaction has cancelled by user.';
+        $message = '1032 Transaction has cancelled by user.';
     } elseif ($ResultCode == '1') {
-        $message = 'The balance is insufficient for the transaction.';
+        $message = '1 The balance is insufficient for the transaction.';
     } elseif ($ResultCode == '0') {
-        $message = 'The transaction is successfuly.';
+        $message = '0 The transaction is successfuly.';
     }
 };
 
