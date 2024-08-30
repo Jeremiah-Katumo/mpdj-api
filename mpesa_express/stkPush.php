@@ -53,4 +53,4 @@ $ResponseCode = $data->ResponseCode;
 
 if ($ResponseCode == "0") {
     echo "The checkout request ID for this transaction is : " . $CheckoutRequestID;
-}
+};
