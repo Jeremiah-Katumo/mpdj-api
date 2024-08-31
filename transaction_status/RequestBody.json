@@ -1,0 +1,13 @@
+{    
+   "Initiator":"testapiuser",
+   "SecurityCredential":"ClONZiMYBpc65lmpJ7nvnrDmUe0WvHvA5QbOsPjEo92B6IGFwDdvdeJIFL0kgwsEKWu6SQKG4ZZUxjC",
+   "Command ID": "TransactionStatusQuery",
+   "Transaction ID": "NEF61H8J60",
+   "OriginatorConversationID":"AG_20190826_0000777ab7d848b9e721",
+   "PartyA":"600782",
+   "IdentifierType":"4",
+   "ResultURL":"http://myservice:8080/transactionstatus/result",
+   "QueueTimeOutURL":"http://myservice:8080/timeout",
+   "Remarks":"OK",
+   "Occasion":"OK"
+}
