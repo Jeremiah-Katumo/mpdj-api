@@ -1,5 +1,7 @@
 <?php
 
+include '../dbconnection.php';
+
 header("Content-Type: application/json");
 
 $stkCallbackResponse = file_get_contents('php://input');
@@ -21,5 +23,7 @@ $PhoneNumber = $data->Body->stkCallback->CallbackMetadata->Item[3]->Value;
 
 // CHECK IF TRANSACTION IS SUCCESSFUL
 if ($ResultCode == 0) {
-    // STORE THE TRANSACTION DETAILS IN THE DATABASE 
+    // STORE THE TRANSACTION DETAILS IN THE DATABASE
+    mysqli_query($db, "INSERT INTO transactions (merchant_request_id, checkout_request_id, result_code, result_description, amount, mpesa_receipt_number, phone)
+                        VALUES ('$MerchantRequestID', '$CheckoutRequestID', '$ResultCode', '$ResultDesc','$AmountValue','$PhoneNumber')");
 };
